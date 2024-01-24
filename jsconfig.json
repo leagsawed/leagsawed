@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "checkJs": true, // Active la vérification des erreurs JS
+    "noImplicitAny": true // Active la vérification stricte des types
+  },
+  "include": [
+    "./**/*" // Inclut tous les fichiers JS de ton projet
+  ]
+}
