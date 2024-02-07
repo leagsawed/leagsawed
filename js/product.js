@@ -61,7 +61,6 @@ function makeColors(colors) {
       const option = document.createElement('option'); // crée une balise html <option></option>
       option.value = color; // <option value=black></option>;
       option.textContent = color;
-      console.log(option);
       select.appendChild(option);
     });
   }
@@ -80,6 +79,7 @@ function handleClick() {
 }
 
 function saveCart(color, quantity) {
+  const key = `${id}-${color}`;
   const data = {
     id: id,
     color: color,
@@ -89,7 +89,7 @@ function saveCart(color, quantity) {
     altTxt: altText,
     name: articleName,
   };
-  localStorage.setItem(id, JSON.stringify(data));
+  localStorage.setItem(key, JSON.stringify(data));
 }
 
 function isOrderInvalid(color, quantity) {
